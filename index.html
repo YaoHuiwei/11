@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh‑CN">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+  <title>个人实践作品集</title>
+  <style>
+    :root {
+      --bg: #F8F7F4;
+      --text‑main: #2A2A2A;
+      --text‑sec: #666666;
+      --accent: #6B7B75;
+      --white: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box‑sizing: border‑box;
+    }
+    body {
+      font‑family: Inter, system‑ui, sans‑serif;
+      background‑color: var(--bg);
+      color: var(--text‑main);
+      line‑height: 1.6;
+      max‑width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    nav {
+      padding: 32px 0;
+      display: flex;
+      gap: 32px;
+    }
+    nav a {
+      color: var(--text‑main);
+      text‑decoration: none;
+      font‑weight: 500;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    section {
+      margin‑bottom: 80px;
+    }
+    .hero {
+      min‑height: 70vh;
+      display: flex;
+      flex‑direction: column;
+      justify‑content: center;
+    }
+    .hero h1 {
+      font‑size: 42px;
+      margin‑bottom: 12px;
+    }
+    .hero .subtitle {
+      font‑size: 18px;
+      color: var(--text‑sec);
+      margin‑bottom: 24px;
+    }
+    .hero p {
+      max‑width: 640px;
+      font‑size: 17px;
+      margin‑bottom: 32px;
+    }
+    .btn‑group {
+      display: flex;
+      gap:16px;
+    }
+    .btn {
+      padding:10px 22px;
+      background‑color: var(--accent);
+      color:white;
+      text‑decoration:none;
+      border‑radius:2px;
+    }
+    .btn‑outline {
+      border:1px solid var(--accent);
+      color:var(--accent);
+      background:transparent;
+    }
+    h2 {
+      font‑size:28px;
+      margin‑bottom:24px;
+      padding‑bottom:8px;
+      border‑bottom:1px solid #ddd;
+    }
+    h3 {
+      font‑size:20px;
+      margin‑bottom:12px;
+      margin‑top:32px;
+    }
+    .meta {
+      color:var(--text‑sec);
+      font‑size:14px;
+      margin‑bottom:16px;
+    }
+    .grid‑projects {
+      display: grid;
+      grid‑template‑columns: 2fr 1fr;
+      gap:24px;
+      margin‑bottom:40px;
+    }
+    .card‑large {
+      background:var(--white);
+      padding:24px;
+    }
+    .card‑small {
+      background:var(--white);
+      padding:24px;
+    }
+    .card‑b {
+      background:var(--white);
+      padding:20px;
+      margin‑bottom:20px;
+    }
+    .timeline‑item {
+      margin‑bottom:20px;
+      padding‑left:16px;
+      border‑left:2px solid var(--accent);
+    }
+    .project‑detail {
+      background:var(--white);
+      padding:32px;
+      margin‑bottom:40px;
+    }
+    .placeholder‑img {
+      background:#eee;
+      height:220px;
+      margin:16px 0;
+      display:flex;
+      align‑items:center;
+      justify‑content:center;
+      color:#888;
+    }
+    footer {
+      padding:40px 0;
+      color:var(--text‑sec);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>你的名字</h1>
+    <div class="subtitle">大学实践者｜热衷于小规模实践与试错复盘</div>
+    <p>我通过副业、社团、自媒体等不同项目开展实践。不畏惧试错，在真实问题中调研、调整，迭代自己的能力与认知，仍在探索未来的发展方向。</p>
+    <div class="btn‑group">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#about" class="btn btn‑outline">About Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <h3>个人简述</h3>
+    <p>大学期间出于好奇心开启多种多样的实践。在摆摊、自媒体、社团活动、陪拍当中经历亏损、流量低迷、客户不满意等现实难题。积累商业实操、活动策划、内容创作、客户服务经验。暂未确定单一职业方向，希望持续在实践中找到热爱与擅长。</p>
+
+    <h3>实践时间线</h3>
+    <div class="timeline‑item">
+      <div><strong>鲜花摆摊副业</strong></div>
+      <p>学会商业试错、成本损耗管控</p>
+    </div>
+    <div class="timeline‑item">
+      <div><strong>石塑黏土小红书账号运营</strong></div>
+      <p>理解自媒体流量逻辑，认清爆款实力与运气并存</p>
+    </div>
+    <div class="timeline‑item">
+      <div><strong>陪拍副业</strong></div>
+      <p>学习客户沟通、动态定价，放下完美主义</p>
+    </div>
+    <div class="timeline‑item">
+      <div><strong>时光信封 · 跨社团联合活动</strong></div>
+      <p>掌握跨社团协作、活动策划与风险预案</p>
+    </div>
+
+    <h3>核心能力</h3>
+    <ul>
+      <li>市场调研与定价、成本与风险预判</li>
+      <li>快速迭代复盘、跨方协作策划</li>
+      <li>现场应变、客户需求洞察</li>
+      <li>内容媒介认知、务实试错思维</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects｜实践项目</h2>
+    <p>以下是我在校期间的个人与社团实践项目。部分项目并未取得巨大成功，但每一段经历都带来真实的复盘与成长。</p>
+
+    <div class="grid‑projects">
+      <div class="card‑large">
+        <h3>01 鲜花摆摊副业</h3>
+        <div class="meta">个人副业 | 独立执行者</div>
+        <p>小成本商业实践，完整走完调研‑备货‑售卖‑复盘闭环。</p>
+        <a href="#proj‑flower" class="btn">查看详情</a>
+      </div>
+      <div class="card‑small">
+        <h3>02 时光信封联合活动</h3>
+        <div class="meta">社团项目 | DIY手工社社长</div>
+        <p>手工与文学跨社团创意合作活动。</p>
+        <a href="#proj‑letter" class="btn">查看详情</a>
+      </div>
+    </div>
+
+    <h3>其他实践项目</h3>
+    <div class="card‑b">
+      <strong>石塑黏土手工自媒体｜副业项目</strong>
+      <div class="meta">Side Project</div>
+      <p><b>背景：</b>尝试石塑黏土手工自媒体副业赚取零花钱</p>
+      <p><b>挑战：</b>流量低迷、转化率低、作品打磨耗时久</p>
+      <p><b>行动：</b>优化封面与作品创意；计划模具批量制作；坚持输出高质量内容</p>
+      <p><b>结果：</b>少数笔记流量暴涨，大部分依旧曝光有限</p>
+      <p><b>反思：</b>爆款依赖实力与运气；利他、热点内容更利于传播，小众自我表达类内容天然流量受限。</p>
+    </div>
+
+    <div class="card‑b">
+      <strong>陪拍服务｜副业项目</strong>
+      <div class="meta">Side Project</div>
+      <p><b>背景：</b>面向同学同龄人提供人像陪拍服务</p>
+      <p><b>挑战：</b>不懂定价、成片达不到客户期待</p>
+      <p><b>行动：</b>调研同行动态调价；拍摄前对齐风格，陌生风格提前学习，现场实时沟通调整</p>
+      <p><b>结果：</b>积累客户与复约，几乎无不满意反馈</p>
+      <p><b>反思：</b>放下专业完美主义，普通客户核心需求是把人拍好看；服务的沟通预期管理与技术同等重要。</p>
+    </div>
+
+    <!-- A类项目详情 鲜花摆摊 -->
+    <div id="proj‑flower" class="project‑detail">
+      <h3>01｜鲜花摆摊副业</h3>
+      <div class="meta">个人副业｜角色：独立执行者</div>
+
+      <h4>Context 背景</h4>
+      <p>大学生副业尝试；希望小成本实践商业，接受试错，明白学生阶段试错成本较低。</p>
+
+      <h4>Problem 问题</h4>
+      <p>点位选择、货源与鲜花损耗风险；缺乏售卖经验；备货与销量难以预估。</p>
+
+      <h4>Role 我的角色</h4>
+      <p>独立完成点位调研、货源比对、成本测算、备货、现场售卖、事后复盘全部流程。</p>
+
+      <h4>Process 过程</h4>
+      <ul>
+        <li>前期：线上搜集点位再实地踩点；核算进货、损耗成本，设置售价；</li>
+        <li>第一轮执行：备货过多，鲜花脱水挤压，出现亏损；</li>
+        <li>迭代：减少备货，优化鲜花保水、搬运方式，降低滞销损耗。</li>
+      </ul>
+
+      <h4>Outcome 产出结果</h4>
+      <p>有账面亏损，但完成完整小商业闭环；验证小规模试错的重要性，不盲目扩大投入。</p>
+
+      <div class="placeholder‑img">【替换：摆摊实拍、成本笔记照片】</div>
+
+      <h4>Reflection 复盘反思</h4>
+      <p>大学做副业不必追求盈利作为唯一标准；提前预判损耗风险；初期规模要克制；失败也是宝贵的学习成本。</p>
+      <a href="#projects">← 返回项目列表</a>
+    </div>
+
+    <!-- A类项目详情 时光信封 -->
+    <div id="proj‑letter" class="project‑detail">
+      <h3>02｜时光信封｜跨社团联合活动</h3>
+      <div class="meta">社团活动｜角色：DIY手工社社长</div>
+
+      <h4>Context 背景</h4>
+      <p>收到文学社合作邀约，两个社团需要开展一场跨社团联合活动。</p>
+
+      <h4>Problem 问题</h4>
+      <p>手工和文学如何融合；如何增加活动趣味性；两个社团之间如何划分分工。</p>
+
+      <h4>Role 我的角色</h4>
+      <p>我方社团负责人：负责创意构思、我方人员安排、折纸教学物料准备，跨社团沟通对齐目标。</p>
+
+      <h4>Process 过程</h4>
+      <ul>
+        <li>构思“时光信封”创意：折纸信封+手写信件，打通手工实操和文学表达；</li>
+        <li>和合作社团对齐分工：我方负责折纸教学，文学社维持写信秩序与一年后信件配送；</li>
+        <li>风险预案：提前打印大量图片教程，应对现场人数超出预估。</li>
+      </ul>
+
+      <h4>Outcome 产出结果</h4>
+      <p>活动火爆，原定纸张耗尽，临时使用A4打印纸补给；依靠教程分流，现场秩序维持良好，参与者反馈热烈。</p>
+
+      <div class="placeholder‑img">【替换：活动现场、信封成品照片】</div>
+
+      <h4>Reflection 复盘反思</h4>
+      <p>好活动同时需要创意构思和落地执行；多方协作需要对齐目标、明确职责节点；要提前预判物料、人流等风险，分歧主动协商达成共赢。</p>
+      <a href="#projects">← 返回项目列表</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>如果你希望进一步交流、合作，可以通过以下方式联系我。</p>
+    <p>邮箱：____@shturl.</p>
+  </section>
+
+  <footer>
+    © 你的名字｜个人实践作品集
+  </footer>
+</body>
+</html>
