@@ -1,304 +1,391 @@
 <!DOCTYPE html>
-<html lang="zh‑CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-  <title>个人实践作品集</title>
-  <style>
-    :root {
-      --bg: #F8F7F4;
-      --text‑main: #2A2A2A;
-      --text‑sec: #666666;
-      --accent: #6B7B75;
-      --white: #ffffff;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box‑sizing: border‑box;
-    }
-    body {
-      font‑family: Inter, system‑ui, sans‑serif;
-      background‑color: var(--bg);
-      color: var(--text‑main);
-      line‑height: 1.6;
-      max‑width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    nav {
-      padding: 32px 0;
-      display: flex;
-      gap: 32px;
-    }
-    nav a {
-      color: var(--text‑main);
-      text‑decoration: none;
-      font‑weight: 500;
-    }
-    nav a:hover {
-      color: var(--accent);
-    }
-    section {
-      margin‑bottom: 80px;
-    }
-    .hero {
-      min‑height: 70vh;
-      display: flex;
-      flex‑direction: column;
-      justify‑content: center;
-    }
-    .hero h1 {
-      font‑size: 42px;
-      margin‑bottom: 12px;
-    }
-    .hero .subtitle {
-      font‑size: 18px;
-      color: var(--text‑sec);
-      margin‑bottom: 24px;
-    }
-    .hero p {
-      max‑width: 640px;
-      font‑size: 17px;
-      margin‑bottom: 32px;
-    }
-    .btn‑group {
-      display: flex;
-      gap:16px;
-    }
-    .btn {
-      padding:10px 22px;
-      background‑color: var(--accent);
-      color:white;
-      text‑decoration:none;
-      border‑radius:2px;
-    }
-    .btn‑outline {
-      border:1px solid var(--accent);
-      color:var(--accent);
-      background:transparent;
-    }
-    h2 {
-      font‑size:28px;
-      margin‑bottom:24px;
-      padding‑bottom:8px;
-      border‑bottom:1px solid #ddd;
-    }
-    h3 {
-      font‑size:20px;
-      margin‑bottom:12px;
-      margin‑top:32px;
-    }
-    .meta {
-      color:var(--text‑sec);
-      font‑size:14px;
-      margin‑bottom:16px;
-    }
-    .grid‑projects {
-      display: grid;
-      grid‑template‑columns: 2fr 1fr;
-      gap:24px;
-      margin‑bottom:40px;
-    }
-    .card‑large {
-      background:var(--white);
-      padding:24px;
-    }
-    .card‑small {
-      background:var(--white);
-      padding:24px;
-    }
-    .card‑b {
-      background:var(--white);
-      padding:20px;
-      margin‑bottom:20px;
-    }
-    .timeline‑item {
-      margin‑bottom:20px;
-      padding‑left:16px;
-      border‑left:2px solid var(--accent);
-    }
-    .project‑detail {
-      background:var(--white);
-      padding:32px;
-      margin‑bottom:40px;
-    }
-    .placeholder‑img {
-      background:#eee;
-      height:220px;
-      margin:16px 0;
-      display:flex;
-      align‑items:center;
-      justify‑content:center;
-      color:#888;
-    }
-    footer {
-      padding:40px 0;
-      color:var(--text‑sec);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>姚慧微 | 个人作品集</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Y</text></svg>">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#E9F5EF;--card:#fff;--line:#A98B79;--accent:#E8A8B8;
+  --text:#333;--sub:#777;--radius:20px;--dash:1.5px dashed #A98B79;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;
+  background-image:radial-gradient(#c9e6d8 .5px,transparent .5px);background-size:20px 20px}
+h1,h2,h3,h4{font-family:'Quicksand','Lato',sans-serif;font-weight:700}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ===== 导航吸顶 ===== */
+nav{position:sticky;top:0;z-index:100;background:rgba(233,245,239,.92);backdrop-filter:blur(8px);
+  border-bottom:1px dashed var(--line);padding:16px 0}
+nav .container{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Quicksand',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);text-decoration:none}
+.nav-links a{margin-left:22px;text-decoration:none;color:var(--text);font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+section{padding:64px 0}
+.section-title{text-align:center;font-size:1.9rem;margin-bottom:40px;color:var(--text)}
+
+/* ===== Hero ===== */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:55vh;padding:40px 0}
+.heart-wrap{display:flex;justify-content:center}
+.heart-frame{width:300px;height:300px;overflow:hidden;
+  clip-path:path('M150 50 C85 0,0 65,0 150 C0 235,150 300,150 300 C150 300,300 235,300 150 C300 65,215 0,150 50 Z');
+  border:3px solid var(--accent)}
+.heart-frame img{width:100%;height:100%;object-fit:cover}
+.hero-text h1{font-size:2.6rem;margin-bottom:12px}
+.hero-text p{color:var(--sub);font-size:1.05rem;margin-bottom:24px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 28px;border-radius:30px;
+  text-decoration:none;cursor:pointer;font-family:'Quicksand',sans-serif;font-size:1rem;border:none;transition:.2s}
+.btn:hover{opacity:.9;transform:translateY(-2px)}
+
+/* ===== 分隔条 ===== */
+.divider{height:14px;background:repeating-linear-gradient(45deg,var(--line),var(--line) 8px,#fff 8px,#fff 16px);border-radius:4px;margin:0}
+
+/* ===== 卡片通用 ===== */
+.card{background:var(--card);border-radius:var(--radius);border:var(--dash);padding:24px;
+  box-shadow:0 4px 12px rgba(0,0,0,.04);transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.07)}
+.card-toggle{cursor:pointer}
+.card-toggle p{color:var(--sub);font-size:.92rem;margin-top:4px}
+.card-hint{margin-top:14px;font-size:.8rem;color:var(--line);opacity:.75}
+.card-hint::after{content:' →'}
+
+/* ===== 关于我 ===== */
+.about-wrap{display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:center}
+.about-img{border-radius:var(--radius);border:var(--dash);overflow:hidden}
+.about-img img{width:100%;display:block}
+
+/* ===== 网格 ===== */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+
+/* ===== 更多板块 ===== */
+.more-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.more-wrap>.card>h3{text-align:center;margin-bottom:18px;font-size:1.25rem}
+
+/* ===== 弹窗 ===== */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:999;padding:20px}
+.modal.active{display:flex}
+.modal-content{background:#fff;border-radius:var(--radius);width:100%;max-width:680px;max-height:88vh;overflow-y:auto;padding:32px;border:var(--dash)}
+.modal-close{float:right;cursor:pointer;font-size:28px;color:var(--line);line-height:1;background:none;border:none}
+.modal-content h3{margin-bottom:16px;font-size:1.35rem}
+.modal-content p{margin-bottom:10px}
+.work-img{margin:16px 0;border-radius:12px;overflow:hidden}
+.work-img img{width:100%;display:block}
+.work-caption{font-size:.85rem;color:var(--sub);text-align:center;margin-top:6px;font-style:italic}
+.reflection{background:#fdf2f5;border-left:4px solid var(--accent);padding:12px 16px;border-radius:8px;margin-top:12px}
+.reflection strong{color:#c4708a}
+
+/* ===== 联系我 ===== */
+.contact-section{text-align:center;padding:64px 0 40px}
+.contact-section h2{font-size:1.9rem;margin-bottom:12px}
+.contact-sub{color:var(--sub);margin-bottom:32px;font-size:1rem}
+.contact-btns{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.contact-btn{display:flex;align-items:center;gap:10px;border:1.5px dashed var(--line);border-radius:30px;
+  padding:12px 24px;background:#fff;font-size:.95rem;color:var(--text)}
+.contact-btn svg{width:20px;height:20px;flex-shrink:0}
+.contact-btn strong{font-weight:600}
+.footer{text-align:center;padding:24px 0 40px;color:var(--sub);font-size:.88rem}
+
+/* ===== 响应式 ===== */
+@media(max-width:768px){
+  .hero,.about-wrap,.more-wrap{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .hero{min-height:auto;text-align:center;gap:24px}
+  .heart-frame{width:240px;height:240px}
+  .nav-links a{margin-left:12px;font-size:.85rem}
+  .contact-btns{flex-direction:column;align-items:center}
+}
+</style>
 </head>
 <body>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <section id="home" class="hero">
-    <h1>你的名字</h1>
-    <div class="subtitle">大学实践者｜热衷于小规模实践与试错复盘</div>
-    <p>我通过副业、社团、自媒体等不同项目开展实践。不畏惧试错，在真实问题中调研、调整，迭代自己的能力与认知，仍在探索未来的发展方向。</p>
-    <div class="btn‑group">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#about" class="btn btn‑outline">About Me</a>
+<!-- ===== 导航 ===== -->
+<nav>
+  <div class="container">
+    <a href="#top" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">姚慧微</a>
+    <div class="nav-links">
+      <a href="#about">关于</a><a href="#skill">技能</a><a href="#project">实践</a><a href="#more">更多</a><a href="#contact">联系</a>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <h3>个人简述</h3>
-    <p>大学期间出于好奇心开启多种多样的实践。在摆摊、自媒体、社团活动、陪拍当中经历亏损、流量低迷、客户不满意等现实难题。积累商业实操、活动策划、内容创作、客户服务经验。暂未确定单一职业方向，希望持续在实践中找到热爱与擅长。</p>
-
-    <h3>实践时间线</h3>
-    <div class="timeline‑item">
-      <div><strong>鲜花摆摊副业</strong></div>
-      <p>学会商业试错、成本损耗管控</p>
-    </div>
-    <div class="timeline‑item">
-      <div><strong>石塑黏土小红书账号运营</strong></div>
-      <p>理解自媒体流量逻辑，认清爆款实力与运气并存</p>
-    </div>
-    <div class="timeline‑item">
-      <div><strong>陪拍副业</strong></div>
-      <p>学习客户沟通、动态定价，放下完美主义</p>
-    </div>
-    <div class="timeline‑item">
-      <div><strong>时光信封 · 跨社团联合活动</strong></div>
-      <p>掌握跨社团协作、活动策划与风险预案</p>
-    </div>
-
-    <h3>核心能力</h3>
-    <ul>
-      <li>市场调研与定价、成本与风险预判</li>
-      <li>快速迭代复盘、跨方协作策划</li>
-      <li>现场应变、客户需求洞察</li>
-      <li>内容媒介认知、务实试错思维</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects｜实践项目</h2>
-    <p>以下是我在校期间的个人与社团实践项目。部分项目并未取得巨大成功，但每一段经历都带来真实的复盘与成长。</p>
-
-    <div class="grid‑projects">
-      <div class="card‑large">
-        <h3>01 鲜花摆摊副业</h3>
-        <div class="meta">个人副业 | 独立执行者</div>
-        <p>小成本商业实践，完整走完调研‑备货‑售卖‑复盘闭环。</p>
-        <a href="#proj‑flower" class="btn">查看详情</a>
-      </div>
-      <div class="card‑small">
-        <h3>02 时光信封联合活动</h3>
-        <div class="meta">社团项目 | DIY手工社社长</div>
-        <p>手工与文学跨社团创意合作活动。</p>
-        <a href="#proj‑letter" class="btn">查看详情</a>
+<!-- ===== Hero ===== -->
+<div class="container">
+  <section class="hero">
+    <div class="heart-wrap">
+      <div class="heart-frame">
+        <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/E7q2b75e6omJoQxWIZHcvZxhnDb" alt="姚慧微">
       </div>
     </div>
-
-    <h3>其他实践项目</h3>
-    <div class="card‑b">
-      <strong>石塑黏土手工自媒体｜副业项目</strong>
-      <div class="meta">Side Project</div>
-      <p><b>背景：</b>尝试石塑黏土手工自媒体副业赚取零花钱</p>
-      <p><b>挑战：</b>流量低迷、转化率低、作品打磨耗时久</p>
-      <p><b>行动：</b>优化封面与作品创意；计划模具批量制作；坚持输出高质量内容</p>
-      <p><b>结果：</b>少数笔记流量暴涨，大部分依旧曝光有限</p>
-      <p><b>反思：</b>爆款依赖实力与运气；利他、热点内容更利于传播，小众自我表达类内容天然流量受限。</p>
-    </div>
-
-    <div class="card‑b">
-      <strong>陪拍服务｜副业项目</strong>
-      <div class="meta">Side Project</div>
-      <p><b>背景：</b>面向同学同龄人提供人像陪拍服务</p>
-      <p><b>挑战：</b>不懂定价、成片达不到客户期待</p>
-      <p><b>行动：</b>调研同行动态调价；拍摄前对齐风格，陌生风格提前学习，现场实时沟通调整</p>
-      <p><b>结果：</b>积累客户与复约，几乎无不满意反馈</p>
-      <p><b>反思：</b>放下专业完美主义，普通客户核心需求是把人拍好看；服务的沟通预期管理与技术同等重要。</p>
-    </div>
-
-    <!-- A类项目详情 鲜花摆摊 -->
-    <div id="proj‑flower" class="project‑detail">
-      <h3>01｜鲜花摆摊副业</h3>
-      <div class="meta">个人副业｜角色：独立执行者</div>
-
-      <h4>Context 背景</h4>
-      <p>大学生副业尝试；希望小成本实践商业，接受试错，明白学生阶段试错成本较低。</p>
-
-      <h4>Problem 问题</h4>
-      <p>点位选择、货源与鲜花损耗风险；缺乏售卖经验；备货与销量难以预估。</p>
-
-      <h4>Role 我的角色</h4>
-      <p>独立完成点位调研、货源比对、成本测算、备货、现场售卖、事后复盘全部流程。</p>
-
-      <h4>Process 过程</h4>
-      <ul>
-        <li>前期：线上搜集点位再实地踩点；核算进货、损耗成本，设置售价；</li>
-        <li>第一轮执行：备货过多，鲜花脱水挤压，出现亏损；</li>
-        <li>迭代：减少备货，优化鲜花保水、搬运方式，降低滞销损耗。</li>
-      </ul>
-
-      <h4>Outcome 产出结果</h4>
-      <p>有账面亏损，但完成完整小商业闭环；验证小规模试错的重要性，不盲目扩大投入。</p>
-
-      <div class="placeholder‑img">【替换：摆摊实拍、成本笔记照片】</div>
-
-      <h4>Reflection 复盘反思</h4>
-      <p>大学做副业不必追求盈利作为唯一标准；提前预判损耗风险；初期规模要克制；失败也是宝贵的学习成本。</p>
-      <a href="#projects">← 返回项目列表</a>
-    </div>
-
-    <!-- A类项目详情 时光信封 -->
-    <div id="proj‑letter" class="project‑detail">
-      <h3>02｜时光信封｜跨社团联合活动</h3>
-      <div class="meta">社团活动｜角色：DIY手工社社长</div>
-
-      <h4>Context 背景</h4>
-      <p>收到文学社合作邀约，两个社团需要开展一场跨社团联合活动。</p>
-
-      <h4>Problem 问题</h4>
-      <p>手工和文学如何融合；如何增加活动趣味性；两个社团之间如何划分分工。</p>
-
-      <h4>Role 我的角色</h4>
-      <p>我方社团负责人：负责创意构思、我方人员安排、折纸教学物料准备，跨社团沟通对齐目标。</p>
-
-      <h4>Process 过程</h4>
-      <ul>
-        <li>构思“时光信封”创意：折纸信封+手写信件，打通手工实操和文学表达；</li>
-        <li>和合作社团对齐分工：我方负责折纸教学，文学社维持写信秩序与一年后信件配送；</li>
-        <li>风险预案：提前打印大量图片教程，应对现场人数超出预估。</li>
-      </ul>
-
-      <h4>Outcome 产出结果</h4>
-      <p>活动火爆，原定纸张耗尽，临时使用A4打印纸补给；依靠教程分流，现场秩序维持良好，参与者反馈热烈。</p>
-
-      <div class="placeholder‑img">【替换：活动现场、信封成品照片】</div>
-
-      <h4>Reflection 复盘反思</h4>
-      <p>好活动同时需要创意构思和落地执行；多方协作需要对齐目标、明确职责节点；要提前预判物料、人流等风险，分歧主动协商达成共赢。</p>
-      <a href="#projects">← 返回项目列表</a>
+    <div class="hero-text">
+      <h1>姚慧微</h1>
+      <p>华侨大学 · 在读学生<br>擅长观察学习、落地执行，习惯复盘总结，乐于在实践中试错探索。</p>
+      <a href="#about" class="btn">了解更多</a>
     </div>
   </section>
+</div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>如果你希望进一步交流、合作，可以通过以下方式联系我。</p>
-    <p>邮箱：____@shturl.</p>
-  </section>
+<div class="container"><div class="divider"></div></div>
 
-  <footer>
-    © 你的名字｜个人实践作品集
-  </footer>
+<!-- ===== 关于我 ===== -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">关于我</h2>
+    <div class="about-wrap card">
+      <div class="about-img">
+        <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/Nx7obHcQ6oyxedxYFv3c3isMnhe" alt="姚慧微">
+      </div>
+      <div>
+        <h3>你好，我是姚慧微</h3>
+        <p>我习惯通过观察模仿快速学习新事物，做事注重细节，追求较高完成度。在多次实践试错中锻炼了自主学习、项目统筹与复盘反思的能力。我愿意持续尝试不同方向，在实践中积累经验，探索适合自己的职业道路。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ===== 技能 ===== -->
+<section id="skill">
+  <div class="container">
+    <h2 class="section-title">技能</h2>
+    <div class="grid-2">
+      <div class="card card-toggle" data-modal="modal-office">
+        <h3>Office办公软件</h3><p>PPT、Word、Excel</p>
+        <div class="card-hint">点击查看详情</div>
+      </div>
+      <div class="card card-toggle" data-modal="modal-ps">
+        <h3>PS</h3><p>图像基础处理</p>
+        <div class="card-hint">点击查看详情</div>
+      </div>
+      <div class="card card-toggle" data-modal="modal-jianying">
+        <h3>剪映</h3><p>视频剪辑制作</p>
+        <div class="card-hint">点击查看详情</div>
+      </div>
+      <div class="card">
+        <h3>CET-4</h3><p>大学英语四级</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 技能弹窗 -->
+<div class="modal" id="modal-office">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>Office 作品展示</h3>
+    <p>课程PPT制作，掌握内容排版、视觉搭配与信息梳理。</p>
+    <div class="work-img">
+      <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/XdtSbA7u9oHkw7xl5bZcpfoonAe" alt="课程PPT作品">
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-ps">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>PS 图像处理</h3>
+    <p>能够使用Photoshop进行基础的图片修图、调色与素材合成，满足日常内容制作需求。</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-jianying">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>剪映剪辑作品</h3>
+    <iframe src="//player.bilibili.com/player.html?bvid=BV1K9pq63EJn&autoplay=0&danmaku=0&poster=1"
+      width="100%" height="400" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  </div>
+</div>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ===== 实践经历 ===== -->
+<section id="project">
+  <div class="container">
+    <h2 class="section-title">实践经历</h2>
+    <div class="grid-3">
+      <div class="card card-toggle" data-modal="modal-paipai">
+        <h3>陪拍服务</h3><p>个人副业实践</p>
+        <div class="card-hint">点击查看详情</div>
+      </div>
+      <div class="card card-toggle" data-modal="modal-flower">
+        <h3>鲜花摆摊</h3><p>线下创业尝试</p>
+        <div class="card-hint">点击查看详情</div>
+      </div>
+      <div class="card card-toggle" data-modal="modal-club">
+        <h3>社团联合活动</h3><p>手工社社长 · 跨社团合作</p>
+        <div class="card-hint">点击查看详情</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 实践弹窗：陪拍 -->
+<div class="modal" id="modal-paipai">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>陪拍服务</h3>
+    <p><strong>做了什么：</strong>调研同水平陪拍定价，低价起步逐步调整；拍摄前主动沟通风格，提前学习陌生拍摄方向，现场实时沟通调整。</p>
+    <p><strong>结果：</strong>积累回头客，几乎无差评，拍摄能力持续提升。</p>
+    <div class="work-img">
+      <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/NDEYbTpVWoYoLoxXOfucl1GunBb" alt="陪拍作品">
+    </div>
+    <div class="reflection">
+      <strong>反思与收获：</strong>学会区分"自我高标准"和"客户实际需求"——不需要做到极致专业，满足大多数客户需求即可。锻炼了沟通能力、自我推广能力和时间精力管理能力。
+    </div>
+  </div>
+</div>
+
+<!-- 实践弹窗：鲜花摆摊 -->
+<div class="modal" id="modal-flower">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>鲜花摆摊</h3>
+    <p><strong>做了什么：</strong>线上查点位+实地勘察选址；寻找靠谱花材渠道；搭配包装；核算成本预留损耗后定价；现场叫卖销售。</p>
+    <p><strong>结果：</strong>首日备货过多，花材变形脱水；次日调整摆放与保水方式，大幅改善，最终小幅亏损200余元。</p>
+    <div class="work-img">
+      <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/KjLKbycYJoAt6kx5LFCcmdytnTf" alt="鲜花摆摊花车">
+    </div>
+    <div class="work-img">
+      <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/Nu0pbcB2noXkNsxMlMTcAoaJnD2" alt="服设作品">
+      <p class="work-caption">用摆摊剩余花材与材料制作的服装作品</p>
+    </div>
+    <div class="reflection">
+      <strong>反思与收获：</strong>初次尝试不要盲目扩大规模，优先稳扎稳打；要提前预判风险。大学阶段试错成本低，适合大胆去尝试。
+    </div>
+  </div>
+</div>
+
+<!-- 实践弹窗：社团活动 -->
+<div class="modal" id="modal-club">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>跨社团联合活动 · 时光信封</h3>
+    <p><strong>做了什么：</strong>策划折纸信封+时光信件玩法；手工社负责折纸教学，文学社负责信件保管与一年后配送；提前打印教程图，预判现场秩序问题。</p>
+    <p><strong>结果：</strong>活动火爆，物料用尽，现场秩序良好。</p>
+    <div class="work-img">
+      <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/MCXSb2qxAolwl0xconLc6dSenQb" alt="折纸活动现场">
+    </div>
+    <div class="reflection">
+      <strong>反思与收获：</strong>锻炼了项目统筹和应急应变能力。多方协作时要对齐目标、明确分工节点，遇到分歧时协商共赢。
+    </div>
+  </div>
+</div>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ===== 更多 ===== -->
+<section id="more">
+  <div class="container">
+    <h2 class="section-title">更多</h2>
+    <div class="more-wrap">
+      <div class="card">
+        <h3>探索</h3>
+        <div class="grid-2">
+          <div class="card card-toggle" data-modal="modal-ai">
+            <h4>AI短剧</h4>
+            <div class="card-hint">点击查看详情</div>
+          </div>
+          <div class="card card-toggle" data-modal="modal-media">
+            <h4>自媒体</h4>
+            <div class="card-hint">点击查看详情</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>爱好</h3>
+        <div class="grid-2">
+          <div class="card"><h4>手工</h4></div>
+          <div class="card"><h4>拍摄</h4></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 探索弹窗：AI短剧 -->
+<div class="modal" id="modal-ai">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>AI 短剧探索</h3>
+    <p style="color:var(--sub)">这是一个小小的初步尝试</p>
+    <iframe src="//player.bilibili.com/player.html?bvid=BV1K9pq63EbT&autoplay=0&danmaku=0&poster=1"
+      width="100%" height="400" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  </div>
+</div>
+
+<!-- 探索弹窗：自媒体 -->
+<div class="modal" id="modal-media">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3>自媒体尝试 · 石塑黏土创作</h3>
+    <div class="work-img">
+      <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/LJHDbOvGJoLsm9xjHiIc1RDQnSc" alt="石塑黏土美西螈手工作品">
+    </div>
+    <p>运营石塑黏土手工小红书账号，观察对标博主，打磨精致小巧的手作作品，学习内容创作与平台流量逻辑。</p>
+  </div>
+</div>
+
+<div class="container"><div class="divider"></div></div>
+
+<!-- ===== 联系我 ===== -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>联系我</h2>
+    <p class="contact-sub">期待实习合作与交流 | 踏实好学、可长期稳定投入</p>
+    <div class="contact-btns">
+      <div class="contact-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A8B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>
+        </svg>
+        <span>邮箱：<strong>3427288108@qq.com</strong></span>
+      </div>
+      <div class="contact-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A8B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>电话：<strong>17374812237</strong></span>
+      </div>
+      <div class="contact-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A8B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        <span>微信：<strong>xiaow8_8</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"></div></div>
+
+<footer class="footer">
+  <p>© 2026 姚慧微 | 个人实习作品集 · 持续成长中</p>
+</footer>
+
+<script>
+document.querySelectorAll('.card-toggle').forEach(c=>{
+  c.addEventListener('click',()=>{
+    document.getElementById(c.dataset.modal).classList.add('active');
+    document.body.style.overflow='hidden';
+  });
+});
+document.querySelectorAll('.modal-close').forEach(b=>{
+  b.addEventListener('click',()=>{
+    b.closest('.modal').classList.remove('active');
+    document.body.style.overflow='';
+  });
+});
+document.querySelectorAll('.modal').forEach(m=>{
+  m.addEventListener('click',e=>{
+    if(e.target===m){m.classList.remove('active');document.body.style.overflow='';}
+  });
+});
+</script>
 </body>
 </html>
