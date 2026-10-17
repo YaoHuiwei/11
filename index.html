@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>姚慧微 | 个人作品集</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Y</text></svg>">
-<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;700&display=swap">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Lato:wght@400;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#E9F5EF;--card:#fff;--line:#A98B79;--accent:#E8A8B8;
@@ -19,85 +19,105 @@ h1,h2,h3,h4{font-family:'Quicksand','Lato',sans-serif;font-weight:700}
 .container{max-width:1080px;margin:0 auto;padding:0 24px}
 
 /* ===== 导航吸顶 ===== */
-nav{position:sticky;top:0;z-index:100;background:rgba(233,245,239,.92);backdrop-filter:blur(8px);
-  border-bottom:1px dashed var(--line);padding:16px 0}
+nav{position:sticky;top:0;z-index:100;background:rgba(233,245,239,.92);backdrop-filter:blur(10px);
+  border-bottom:1px dashed var(--line);padding:14px 0}
 nav .container{display:flex;justify-content:space-between;align-items:center}
-.nav-logo{font-family:'Quicksand',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);text-decoration:none}
-.nav-links a{margin-left:22px;text-decoration:none;color:var(--text);font-size:.95rem;transition:color .2s}
-.nav-links a:hover{color:var(--accent)}
+.nav-logo{font-family:'Quicksand',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);text-decoration:none;
+  padding:6px 14px;border-radius:20px;transition:.2s}
+.nav-logo:hover{background:rgba(232,168,184,.15)}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--text);font-size:.92rem;padding:8px 18px;border-radius:20px;
+  transition:.25s;border:1.5px solid transparent;font-weight:500}
+.nav-links a:hover{background:rgba(232,168,184,.12);color:var(--accent)}
+.nav-links a.active{background:var(--accent);color:#fff;border-color:var(--accent);
+  box-shadow:0 3px 10px rgba(232,168,184,.35)}
 
-section{padding:64px 0}
-.section-title{text-align:center;font-size:1.9rem;margin-bottom:40px;color:var(--text)}
+/* ===== 板块一屏 ===== */
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:70px 0}
+.section-title{text-align:center;font-size:2.1rem;margin-bottom:44px;color:var(--text)}
+.section-title::after{content:'';display:block;width:60px;height:4px;background:var(--accent);border-radius:2px;margin:12px auto 0}
 
 /* ===== Hero ===== */
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:55vh;padding:40px 0}
-.heart-wrap{display:flex;justify-content:center}
-.heart-frame{width:300px;height:300px;overflow:hidden;
-  clip-path:path('M150 50 C85 0,0 65,0 150 C0 235,150 300,150 300 C150 300,300 235,300 150 C300 65,215 0,150 50 Z');
-  border:3px solid var(--accent)}
-.heart-frame img{width:100%;height:100%;object-fit:cover}
-.hero-text h1{font-size:2.6rem;margin-bottom:12px}
-.hero-text p{color:var(--sub);font-size:1.05rem;margin-bottom:24px}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 28px;border-radius:30px;
-  text-decoration:none;cursor:pointer;font-family:'Quicksand',sans-serif;font-size:1rem;border:none;transition:.2s}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-photo{width:320px;height:320px;border-radius:50%;overflow:hidden;border:3px solid var(--accent);
+  box-shadow:0 10px 30px rgba(232,168,184,.25);margin:0 auto}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-text h1{font-size:3rem;margin-bottom:16px}
+.hero-text p{color:var(--sub);font-size:1.1rem;margin-bottom:28px;line-height:1.8}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:30px;
+  text-decoration:none;cursor:pointer;font-family:'Quicksand',sans-serif;font-size:1.05rem;border:none;
+  transition:.25s;box-shadow:0 4px 14px rgba(232,168,184,.3)}
 .btn:hover{opacity:.9;transform:translateY(-2px)}
 
 /* ===== 分隔条 ===== */
-.divider{height:14px;background:repeating-linear-gradient(45deg,var(--line),var(--line) 8px,#fff 8px,#fff 16px);border-radius:4px;margin:0}
+.divider{height:14px;background:repeating-linear-gradient(45deg,var(--line),var(--line) 8px,#fff 8px,#fff 16px);border-radius:4px}
 
-/* ===== 卡片通用 ===== */
-.card{background:var(--card);border-radius:var(--radius);border:var(--dash);padding:24px;
-  box-shadow:0 4px 12px rgba(0,0,0,.04);transition:.25s}
-.card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.07)}
+/* ===== 卡片 ===== */
+.card{background:var(--card);border-radius:var(--radius);border:var(--dash);padding:28px;
+  box-shadow:0 4px 14px rgba(0,0,0,.05);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
 .card-toggle{cursor:pointer}
-.card-toggle p{color:var(--sub);font-size:.92rem;margin-top:4px}
-.card-hint{margin-top:14px;font-size:.8rem;color:var(--line);opacity:.75}
+.card-toggle p{color:var(--sub);font-size:.95rem;margin-top:6px}
+.card-hint{margin-top:16px;font-size:.82rem;color:var(--line);opacity:.7}
 .card-hint::after{content:' →'}
 
 /* ===== 关于我 ===== */
-.about-wrap{display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:center}
-.about-img{border-radius:var(--radius);border:var(--dash);overflow:hidden}
+.about-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;align-items:center}
+.about-img{border-radius:var(--radius);border:var(--dash);overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.08)}
 .about-img img{width:100%;display:block}
 
 /* ===== 网格 ===== */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+
+/* ===== 能力陈列 ===== */
+.skills-strip{margin-top:44px;text-align:center}
+.skills-strip-title{font-family:'Quicksand',sans-serif;font-weight:600;font-size:1.05rem;color:var(--sub);
+  letter-spacing:.05em;margin-bottom:20px}
+.skills-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:760px;margin:0 auto}
+.chip{background:rgba(232,168,184,.14);border:1px dashed var(--accent);color:#b0607a;
+  font-size:.88rem;padding:8px 18px;border-radius:30px;transition:.2s}
+.chip:hover{background:rgba(232,168,184,.28);transform:translateY(-2px)}
 
 /* ===== 更多板块 ===== */
 .more-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.more-wrap>.card>h3{text-align:center;margin-bottom:18px;font-size:1.25rem}
+.more-wrap>.card>h3{text-align:center;margin-bottom:20px;font-size:1.3rem}
 
 /* ===== 弹窗 ===== */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:999;padding:20px}
 .modal.active{display:flex}
-.modal-content{background:#fff;border-radius:var(--radius);width:100%;max-width:680px;max-height:88vh;overflow-y:auto;padding:32px;border:var(--dash)}
+.modal-content{background:#fff;border-radius:var(--radius);width:100%;max-width:700px;max-height:88vh;overflow-y:auto;padding:36px;border:var(--dash)}
 .modal-close{float:right;cursor:pointer;font-size:28px;color:var(--line);line-height:1;background:none;border:none}
-.modal-content h3{margin-bottom:16px;font-size:1.35rem}
-.modal-content p{margin-bottom:10px}
-.work-img{margin:16px 0;border-radius:12px;overflow:hidden}
+.modal-content h3{margin-bottom:18px;font-size:1.4rem}
+.star-line{margin-bottom:14px;font-size:.95rem}
+.star-line strong{color:#b0607a}
+.star-line .lab{display:inline-block;min-width:64px;font-weight:700;color:var(--text)}
+.work-img{margin:18px 0;border-radius:12px;overflow:hidden}
 .work-img img{width:100%;display:block}
-.work-caption{font-size:.85rem;color:var(--sub);text-align:center;margin-top:6px;font-style:italic}
-.reflection{background:#fdf2f5;border-left:4px solid var(--accent);padding:12px 16px;border-radius:8px;margin-top:12px}
+.work-caption{font-size:.88rem;color:var(--sub);text-align:center;margin-top:8px;font-style:italic}
+.reflection{background:#fdf2f5;border-left:4px solid var(--accent);padding:14px 18px;border-radius:8px;margin-top:14px}
 .reflection strong{color:#c4708a}
 
 /* ===== 联系我 ===== */
-.contact-section{text-align:center;padding:64px 0 40px}
-.contact-section h2{font-size:1.9rem;margin-bottom:12px}
-.contact-sub{color:var(--sub);margin-bottom:32px;font-size:1rem}
+.contact-section{text-align:center}
+.contact-section h2{font-size:2.1rem;margin-bottom:16px}
+.contact-sub{color:var(--sub);margin-bottom:40px;font-size:1.05rem}
 .contact-btns{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
 .contact-btn{display:flex;align-items:center;gap:10px;border:1.5px dashed var(--line);border-radius:30px;
-  padding:12px 24px;background:#fff;font-size:.95rem;color:var(--text)}
+  padding:14px 28px;background:#fff;font-size:.98rem;color:var(--text);transition:.25s}
+.contact-btn:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(232,168,184,.2);transform:translateY(-2px)}
 .contact-btn svg{width:20px;height:20px;flex-shrink:0}
-.contact-btn strong{font-weight:600}
-.footer{text-align:center;padding:24px 0 40px;color:var(--sub);font-size:.88rem}
+.footer{text-align:center;padding:32px 0;color:var(--sub);font-size:.9rem;min-height:auto}
 
 /* ===== 响应式 ===== */
 @media(max-width:768px){
   .hero,.about-wrap,.more-wrap{grid-template-columns:1fr}
   .grid-3{grid-template-columns:1fr}
-  .hero{min-height:auto;text-align:center;gap:24px}
-  .heart-frame{width:240px;height:240px}
-  .nav-links a{margin-left:12px;font-size:.85rem}
+  section{min-height:auto;padding:60px 0}
+  .hero{text-align:center;gap:28px}
+  .hero-photo{width:230px;height:230px}
+  .hero-text h1{font-size:2.2rem}
+  .nav-links a{padding:6px 12px;font-size:.82rem}
   .contact-btns{flex-direction:column;align-items:center}
 }
 </style>
@@ -115,11 +135,11 @@ section{padding:64px 0}
 </nav>
 
 <!-- ===== Hero ===== -->
-<div class="container">
-  <section class="hero">
-    <div class="heart-wrap">
-      <div class="heart-frame">
-        <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/E7q2b75e6omJoQxWIZHcvZxhnDb" alt="姚慧微">
+<section id="top">
+  <div class="container hero">
+    <div>
+      <div class="hero-photo">
+        <img src="https://aka.doubaocdn.com/s/xrZMaIVfyK" alt="姚慧微">
       </div>
     </div>
     <div class="hero-text">
@@ -127,8 +147,8 @@ section{padding:64px 0}
       <p>华侨大学 · 在读学生<br>擅长观察学习、落地执行，习惯复盘总结，乐于在实践中试错探索。</p>
       <a href="#about" class="btn">了解更多</a>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
 <div class="container"><div class="divider"></div></div>
 
@@ -185,7 +205,6 @@ section{padding:64px 0}
     </div>
   </div>
 </div>
-
 <div class="modal" id="modal-ps">
   <div class="modal-content">
     <button class="modal-close">&times;</button>
@@ -193,7 +212,6 @@ section{padding:64px 0}
     <p>能够使用Photoshop进行基础的图片修图、调色与素材合成，满足日常内容制作需求。</p>
   </div>
 </div>
-
 <div class="modal" id="modal-jianying">
   <div class="modal-content">
     <button class="modal-close">&times;</button>
@@ -223,6 +241,21 @@ section{padding:64px 0}
         <div class="card-hint">点击查看详情</div>
       </div>
     </div>
+
+    <!-- 能力陈列 -->
+    <div class="skills-strip">
+      <p class="skills-strip-title">实践沉淀的能力</p>
+      <div class="skills-chips">
+        <span class="chip">项目前期调研与风险预判</span>
+        <span class="chip">成本核算与商业试错思维</span>
+        <span class="chip">问题迭代优化 · 快速复盘</span>
+        <span class="chip">创意策划 · 跨领域融合</span>
+        <span class="chip">多方协作与分工管理</span>
+        <span class="chip">现场统筹与临场应变</span>
+        <span class="chip">内容创作与媒介认知</span>
+        <span class="chip">理性的试错心态与复盘反思</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -231,13 +264,16 @@ section{padding:64px 0}
   <div class="modal-content">
     <button class="modal-close">&times;</button>
     <h3>陪拍服务</h3>
-    <p><strong>做了什么：</strong>调研同水平陪拍定价，低价起步逐步调整；拍摄前主动沟通风格，提前学习陌生拍摄方向，现场实时沟通调整。</p>
-    <p><strong>结果：</strong>积累回头客，几乎无差评，拍摄能力持续提升。</p>
+    <div class="star-line"><span class="lab">背景</span><strong>大学副业</strong>，为同龄人、同学提供外出跟拍服务。</div>
+    <div class="star-line"><span class="lab">问题</span>初期不懂定价；成片偶尔出现客人不满意。</div>
+    <div class="star-line"><span class="lab">行动</span>调研同水平陪拍市场价位，结合自身阶段动态调价，起步低价、逐步涨价；拍摄前深度沟通偏好风格，遇到不擅长风格提前找参考样片学习，现场实时沟通调整姿势与构图。</div>
+    <div class="star-line"><span class="lab">结果</span>客户逐步积累，产生复约客户，几乎不再出现不满意，获得副业收入。</div>
     <div class="work-img">
       <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/NDEYbTpVWoYoLoxXOfucl1GunBb" alt="陪拍作品">
     </div>
     <div class="reflection">
-      <strong>反思与收获：</strong>学会区分"自我高标准"和"客户实际需求"——不需要做到极致专业，满足大多数客户需求即可。锻炼了沟通能力、自我推广能力和时间精力管理能力。
+      <strong>学到</strong>人像拍摄技术提升；掌握客户沟通方法；学习自我推广获客；懂得平衡项目与个人时间精力。<br>
+      <strong>思维转变</strong>摒弃"要达到专业摄影师水准、追求极致光影"的完美主义；明白面向普通客户，满足核心诉求——把本人拍好看，就已能完成服务。
     </div>
   </div>
 </div>
@@ -247,8 +283,10 @@ section{padding:64px 0}
   <div class="modal-content">
     <button class="modal-close">&times;</button>
     <h3>鲜花摆摊</h3>
-    <p><strong>做了什么：</strong>线上查点位+实地勘察选址；寻找靠谱花材渠道；搭配包装；核算成本预留损耗后定价；现场叫卖销售。</p>
-    <p><strong>结果：</strong>首日备货过多，花材变形脱水；次日调整摆放与保水方式，大幅改善，最终小幅亏损200余元。</p>
+    <div class="star-line"><span class="lab">背景</span>大学阶段线下创业实践，在校园周边开展鲜花摆摊经营。</div>
+    <div class="star-line"><span class="lab">问题</span>选址风险大；花材采购渠道不熟；不懂包装搭配；不会定价；现场销售经验为零。</div>
+    <div class="star-line"><span class="lab">行动</span>线上查点位+实地勘察人流动线定址；多方对比找靠谱花材渠道；研究花材搭配与包装提升卖相；核算成本预留损耗后定价；现场主动叫卖揽客。</div>
+    <div class="star-line"><span class="lab">结果</span>首日备货过多、花材变形脱水；次日调整摆放与保水方式，售卖大幅改善；最终小幅亏损200余元，用剩余材料制作了服装设计作品。</div>
     <div class="work-img">
       <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/KjLKbycYJoAt6kx5LFCcmdytnTf" alt="鲜花摆摊花车">
     </div>
@@ -257,7 +295,8 @@ section{padding:64px 0}
       <p class="work-caption">用摆摊剩余花材与材料制作的服装作品</p>
     </div>
     <div class="reflection">
-      <strong>反思与收获：</strong>初次尝试不要盲目扩大规模，优先稳扎稳打；要提前预判风险。大学阶段试错成本低，适合大胆去尝试。
+      <strong>学到</strong>掌握选品、定价、成本核算的基本逻辑；学会从失败中快速复盘、次日即时调整；认识到大学阶段试错成本低，是积累商业经验的好机会。<br>
+      <strong>思维转变</strong>从"想一次做大规模、追求首战告捷"转变为"小步试错、稳扎稳打、先跑通最小闭环"；学会提前预判风险、预留损耗，不再盲目乐观备货。
     </div>
   </div>
 </div>
@@ -267,13 +306,16 @@ section{padding:64px 0}
   <div class="modal-content">
     <button class="modal-close">&times;</button>
     <h3>跨社团联合活动 · 时光信封</h3>
-    <p><strong>做了什么：</strong>策划折纸信封+时光信件玩法；手工社负责折纸教学，文学社负责信件保管与一年后配送；提前打印教程图，预判现场秩序问题。</p>
-    <p><strong>结果：</strong>活动火爆，物料用尽，现场秩序良好。</p>
+    <div class="star-line"><span class="lab">背景</span>作为手工社社长，与文学社联合策划跨社团活动"时光信封"，尝试将手工与文学结合。</div>
+    <div class="star-line"><span class="lab">问题</span>两个社团主题差异大，如何结合才有趣；双方分工与权责如何划分；担心现场秩序混乱。</div>
+    <div class="star-line"><span class="lab">行动</span>设计"折纸信封+时光信件"玩法，手工社负责折纸教学、文学社负责信件保管与一年后配送，两社特长自然互补；与文学社对齐目标、明确分工节点；提前打印教程图保障现场教学；预判人流秩序提前安排引导。</div>
+    <div class="star-line"><span class="lab">结果</span>活动火爆，物料全部用尽，现场秩序良好，参与者反馈积极。</div>
     <div class="work-img">
       <img src="https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/MCXSb2qxAolwl0xconLc6dSenQb" alt="折纸活动现场">
     </div>
     <div class="reflection">
-      <strong>反思与收获：</strong>锻炼了项目统筹和应急应变能力。多方协作时要对齐目标、明确分工节点，遇到分歧时协商共赢。
+      <strong>学到</strong>锻炼项目统筹与应急应变能力；学会跨团队协作中对齐目标、明确分工节点；理解遇到分歧时协商共赢。<br>
+      <strong>思维转变</strong>从"单打独斗、亲力亲为"转变为"借力协作、合理分工"；意识到好的活动设计能让双方优势自然互补，而不是硬凑主题。
     </div>
   </div>
 </div>
@@ -309,7 +351,7 @@ section{padding:64px 0}
   </div>
 </section>
 
-<!-- 探索弹窗：AI短剧 -->
+<!-- 探索弹窗 -->
 <div class="modal" id="modal-ai">
   <div class="modal-content">
     <button class="modal-close">&times;</button>
@@ -319,8 +361,6 @@ section{padding:64px 0}
       width="100%" height="400" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
   </div>
 </div>
-
-<!-- 探索弹窗：自媒体 -->
 <div class="modal" id="modal-media">
   <div class="modal-content">
     <button class="modal-close">&times;</button>
@@ -362,8 +402,6 @@ section{padding:64px 0}
   </div>
 </section>
 
-<div class="container"><div class="divider"></div></div>
-
 <footer class="footer">
   <p>© 2026 姚慧微 | 个人实习作品集 · 持续成长中</p>
 </footer>
@@ -384,6 +422,20 @@ document.querySelectorAll('.modal-close').forEach(b=>{
 document.querySelectorAll('.modal').forEach(m=>{
   m.addEventListener('click',e=>{
     if(e.target===m){m.classList.remove('active');document.body.style.overflow='';}
+  });
+});
+
+// 导航高亮当前板块
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    if(window.scrollY>=s.offsetTop-120) current=s.id;
+  });
+  navLinks.forEach(a=>{
+    a.classList.remove('active');
+    if(a.getAttribute('href')==='#'+current) a.classList.add('active');
   });
 });
 </script>
